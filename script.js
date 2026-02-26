@@ -31,7 +31,7 @@ function prevSlide() {
 
 setInterval(nextSlide, 3000);
 
-const birthday = new Date("February 26, 2026 00:00:00").getTime();
+const birthday = new Date("February 28, 2026 00:00:00").getTime();
 
 const lockScreen = document.getElementById("lockScreen");
 const mainContent = document.getElementById("mainContent");
