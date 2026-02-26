@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Rudrakshi ❤️</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="hearts-container"></div>
+
+    <div id="lockScreen">
+        <div class="lock-box">
+            <h1>🎁 A Special Surprise For You</h1>
+            <p>Unlocks on 28 February ❤️</p>
+            <div id="countdown">Loading...</div>
+        </div>
+    </div>
+
+    <div class="main-container">
+
+        <h1 class="title">
+            Happy Birthday Rudrakshi 🎂❤️
+        </h1>
+
+        <p class="subtitle">
+            You are the most beautiful part of my life.
+        </p>
+
+        <div class="nav">
+        <a href="letter.html" class="btn">💌 Love Letter</a>
+        <a href="memories.html" class="btn">📸 Our Memories</a>
+        <button class="surprise-btn" onclick="checkPassword()">
+            Open Surprise 🎁
+        </button>
+    </div>
+
+    <div id="passwordBox" class="password-box">
+    <div class="password-card">
+        <h2>Enter Password 💌</h2>
+        <p class="hint-text">Hint: Her Name 😉</p>
+        <input type="password" id="passwordInput" placeholder="Enter password...">
+        <button onclick="verifyPassword()">Unlock ❤️</button>
+        <button onclick="closePassword()" class="back-btn">Back ⬅️</button>
+        <p id="errorMsg"></p>
+    </div>
+</div>
+    </div>
+    
+
+    <script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,316 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4, #ffd1ff);
+    text-align: center;
+}
+
+.container {
+    max-width: 800px;
+    width: 90%;
+    padding: 40px;
+}
+
+h1 {
+    font-size: 3rem;
+    color: white;
+    margin-bottom: 15px;
+}
+
+h2 {
+    font-size: 2.5rem;
+    color:white;
+    margin-bottom: 15px;
+}
+
+p {
+    color: white;
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+.btn {
+    text-decoration: none;
+    background: #ff4e78;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: scale(1.08);
+    background: #ff2e63;
+}
+
+.slideshow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#slide {
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    max-width: 90%;
+}
+
+#lockScreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(135deg, #ff9aa2, #ffc3a0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    text-align: center;
+}
+
+.lock-box {
+    background: white;
+    padding: 40px;
+    border-radius: 25px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+}
+
+#countdown {
+    font-size: 32px;
+    color: #ff4d6d;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+#lockScreen h1,
+#lockScreen p {
+    color: #8B0000; 
+}
+
+.start-btn {
+    color: white;          /* text color */
+    text-decoration: none; /* remove underline */
+    background: #ff4d6d;   /* romantic pink button */
+    padding: 14px 28px;
+    border-radius: 30px;
+    font-size: 20px;
+    font-weight: 600;
+    display: inline-block;
+    transition: 0.3s ease;
+}
+
+.start-btn:hover {
+    background: #ff2e55;
+    transform: scale(1.05);
+}
+
+.hearts-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 9999; /* VERY IMPORTANT */
+}
+
+.heart {
+    position: absolute;
+    bottom: -50px;
+    font-size: 24px;
+    animation: floatUp linear forwards;
+    opacity: 0.9;
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-110vh);
+        opacity: 0;
+    }
+}
+
+.main-container {
+  position: relative;
+  z-index: 2;
+}
+
+.choice-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.yes-btn, .no-btn {
+  font-size: 20px;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 40px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.yes-btn {
+  background: #ff4d6d;
+  color: white;
+}
+
+.no-btn {
+  background: #444;
+  color: white;
+}
+
+.yes-btn:hover {
+  transform: scale(1.1);
+}
+
+.final-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.video-box {
+    margin-top: 30px;
+}
+
+.video-box video {
+    width: 420px;
+    max-width: 90%;
+    border-radius: 25px;
+    box-shadow: 0 15px 40px rgba(255, 77, 109, 0.35);
+}
+
+.back-btn {
+    margin-top: 40px;
+    padding: 15px 35px;
+    font-size: 20px;
+    border: none;
+    border-radius: 30px;
+    background: #ff4d6d;
+    color: white;
+    cursor: pointer;
+}
+
+.password-box {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.password-card {
+    background: #fff0f5;
+    padding: 30px 40px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.password-card h2 {
+    margin-bottom: 10px;
+    color: #ff4d6d;
+}
+
+.password-card input {
+    padding: 10px;
+    width: 220px;
+    border-radius: 10px;
+    border: 2px solid #ff4d6d;
+    outline: none;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.password-card button {
+    margin-top: 15px;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 20px;
+    background: #ff4d6d;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#errorMsg {
+    color: red;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.hint-text {
+    color: #ff4d6d;
+    font-size: 18px;
+    margin-top: 10px;
+    opacity: 1; 
+    font-weight: 500;
+}
+
+.password-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.back-btn {
+    padding: 12px 24px;
+    border-radius: 30px;
+    border: none;
+    background: #555;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.back-btn:hover {
+    background: #333;
+}
+
+.surprise-btn {
+    background: #ff4d6d;
+    border: none;
+    padding: 18px 40px;
+    border-radius: 40px;
+    font-size: 22px;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.surprise-btn:hover {
+    transform: scale(1.05);
+}
